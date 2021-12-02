@@ -1,4 +1,4 @@
-from projectile_new_main import *
+from projectile_main import *
 
 import math
 import matplotlib.pyplot as plt
