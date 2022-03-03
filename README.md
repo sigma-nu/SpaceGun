@@ -16,4 +16,6 @@ The repository contains several scripts that function in different ways to colle
 - projectile_dataGather: Provides the results from a series of simulation runs at once to observe how changing a parameter affects the trajectory.
 - projectile_minEnergy: Iterates through a range of launch angles and increments the launch velocity until a target stable orbit (TSO) is reached. More data is then calculated to determine how the launch angle affects how much mass can be delivered to orbit in a single launch.
 
+At the moment the parameters are changed by manually changing the values within the scripts. Future iterations of these scripts could involve changing these via the command line or with some UI elements for easier data gathering and display.
+
 Developed for Unusual systems and in collaboration with Lancaster laboratories.
