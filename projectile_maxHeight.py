@@ -7,15 +7,12 @@ import sys
 import numpy as np
 import re
 
-#####################################################################
-###  A script to determine the ballistic trajectories of projectiles
-###  with atmospheric resistance.
-###
-###  Iterates through a variable (launch velocity, angle, etc.) to
-###  see how it impacts the maximum height of the projectile.
-###
-###  Author: Steven Norfolk
-#####################################################################
+'''
+A script to determine the ballistic trajectories of projectiles with atmospheric resistance.
+Iterates through a variable (launch velocity, angle, etc.) to see how it impacts the maximum height of the projectile.
+
+Author: Steven Norfolk
+'''
 
 ###################### INITIALIZING DATA LISTS ######################
 variables = []

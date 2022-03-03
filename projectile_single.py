@@ -7,16 +7,13 @@ import sys
 import numpy as np
 import re
 
-#####################################################################
-###  A script to determine the ballistic trajectories of projectiles
-###  with atmospheric resistance.
-###
-###  This script runs a single simulation run.
-###
-###  Calls on projectile_new_main.py
-###
-###  Author: Steven Norfolk
-#####################################################################
+'''
+A script to determine the ballistic trajectories of projectiles with atmospheric resistance.
+This script runs a single simulation run.
+Calls on projectile_new_main.py
+
+Author: Steven Norfolk
+'''
 
 ############################### INPUT ###############################
 # Input parameters:

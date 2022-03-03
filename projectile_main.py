@@ -5,15 +5,12 @@ import sys
 import numpy as np
 import re
 
-#####################################################################
-###  A script to determine the ballistic trajectories of projectiles
-###  with atmospheric resistance.
-###
-###  This is the main script that contains the functions for running
-###  the simulation.
-###
-###  Author: Steven Norfolk
-#####################################################################
+'''
+A script to determine the ballistic trajectories of projectiles with atmospheric resistance.
+This is the main script that contains the functions for running the simulation.
+
+Author: Steven Norfolk
+'''
 
 # Constants:
 radius_earth = 6371000
@@ -35,7 +32,7 @@ def calculate_normal(x_comp, y_comp):
 def transform_coordinateSystem(x_comp, y_comp, theta):
     xi = x_comp*math.cos(theta) + y_comp*math.sin(theta)
     yi = x_comp*math.sin(theta) - y_comp*math.cos(theta)
-    return xi,yi
+    return xi, yi
 
 # Define functions:
 def calculate_gravitationalAcc(x, y):
@@ -46,7 +43,10 @@ def calculate_gravitationalAcc(x, y):
     ag_y = ag*ry_norm
     return ag_x, ag_y
 
-def calculate_airDensity(x, y): # https://www.grc.nasa.gov/WWW/K-12/airplane/atmosmet.html
+def calculate_airDensity(x, y):
+    '''
+    Atmosphere model obtained from https://www.grc.nasa.gov/WWW/K-12/airplane/atmosmet.html
+    '''
     h = calculate_surfaceHeight(x, y)
     if h > 25000: # Upper atmosphere
         T = -131.21 + 0.00299*h
@@ -97,7 +97,9 @@ def calculate_surfaceHeight(x, y):
 
 ######################## SIMULATION FUNCTIONS #######################
 def initiate(launch_angle, launch_velocity, launch_height, mass, cd, set_drag):
-    # Parameters are initiated here so that they can be easily and consistently imported into other scripts:
+    '''
+    Initiate parameters so that they can be easily and consistently imported into other scripts
+    '''
     t = 0
     x = 0
     y = launch_height
@@ -113,7 +115,10 @@ def initiate(launch_angle, launch_velocity, launch_height, mass, cd, set_drag):
     timestep = 0.01
     return t, x, y, launch_angle, area, x_vel, y_vel, x_acc, y_acc, h, end_time, timestep
 
-def update(x, y, x_vel, y_vel, x_acc, y_acc, area, mass, cd, set_drag, timestep): # Velocity Verlet method
+def update(x, y, x_vel, y_vel, x_acc, y_acc, area, mass, cd, set_drag, timestep):
+    '''
+    Update projectile with Velocity Verlet method
+    '''
     # Position update:
     x += x_vel*timestep + 0.5*x_acc*timestep**2
     y += y_vel*timestep + 0.5*y_acc*timestep**2

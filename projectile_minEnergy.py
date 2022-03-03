@@ -8,21 +8,21 @@ import numpy as np
 import re
 import time
 
-#####################################################################
-###  A script to determine the ballistic trajectories
-###  of projectiles with atmospheric resistance.
-###
-###  Iterates through a range of angles and velocities to find
-###  minimum requirements for specific TSO.
-###
-###  Author: Steven Norfolk
-#####################################################################
+'''
+A script to determine the ballistic trajectories of projectiles with atmospheric resistance.
+Iterates through a range of angles and velocities to find minimum requirements for specific target stable orbit (TSO).
+
+Author: Steven Norfolk
+'''
 
 # Define functions:
 def calculate_kinEnergy(m, v):
     return 0.5*m*v**2
 
-def calculate_remainingMass(m, t_v, Isp): # Rocket equation
+def calculate_remainingMass(m, t_v, Isp):
+    '''
+    Use the Rocket equation to calculate the final mass of the projectile after circularisation burn
+    '''
     return m*math.exp(-(math.sqrt((G*mass_earth)/(TSO+radius_earth))-t_v)/(Isp*9.81))
 
 ###################### INITIALIZING DATA LISTS ######################

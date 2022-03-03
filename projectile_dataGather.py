@@ -8,14 +8,12 @@ import numpy as np
 import re
 import os
 
-#####################################################################
-###  A script to determine the ballistic trajectories
-###  of projectiles with atmospheric resistance.
-###
-###  Determines how the max height of projectile changes with variables.
-###
-###  Author: Steven Norfolk
-#####################################################################
+'''
+A script to determine the ballistic trajectories of projectiles with atmospheric resistance.
+Determines how the max height of projectile changes with variables.
+
+Author: Steven Norfolk
+'''
 
 ############################### INPUT ###############################
 # Input parameters:
