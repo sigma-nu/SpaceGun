@@ -2,7 +2,7 @@
 
 ## Overview
 
-Space guns are a theoretical technology that reduces the cost of getting bulk materials into space using giant cannons to replace the first stage of a rocket.
+Space guns are a theoretical technology that uses giant cannons to replace the first stage of a rocket to get bulk materials into low-Earth orbit. For many years, they have been proposed theoretically but in recent years there have been some practical demonstrations. These devices have been theorised to reduce the cost per kilogram to orbit from ~$5000 to as low as $200. Such a significant reduction in cost would dramatically accelerate the development of our local region of space.
 
 This script performs a simple simulation of an unpowered ballistic projectile within the Earths atmosphere. The simulation uses the Velocity Verlet method to simulate the projectiles motion and applies it with a simple atmosphere model [made available by NASA](https://www.grc.nasa.gov/WWW/K-12/airplane/atmosmet.html).
 
